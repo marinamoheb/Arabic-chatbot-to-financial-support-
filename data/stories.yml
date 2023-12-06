@@ -1,0 +1,30 @@
+version: "3.1"
+
+stories:
+
+- story: happy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: user_name
+  - action: utter_user_name
+  - intent: user_query
+  - action: utter_user_query
+  - intent: user_answer
+  - action: utter_user_answer
+  - intent: user_load
+  - action: utter_load
+
+
+# - story: happy path 2
+#   steps:
+#   - intent: user_name
+#   - action: utter_user_name
+#   - intent: user_query 
+#   - action: utter_user_query
+#   - intent: user_answer
+#   - action: utter_user_answer
+
+
+
+

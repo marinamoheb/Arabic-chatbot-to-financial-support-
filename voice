@@ -1,0 +1,11 @@
+import requests
+import speech_recognition as sr     # import the library
+import os
+from translate import Translator
+from gtts import gTTS
+from playsound import playsound
+myobj = gTTS(text="i love you lord ")
+myobj.save("welcome.mp3")
+print('saved')
+playsound('welcome.mp3')
+os.remove("welcome.mp3")

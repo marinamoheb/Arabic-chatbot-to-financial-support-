@@ -1,0 +1,58 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - user_name 
+  - user_query
+  - user_answer
+  - user_load
+  - bot_challenge
+
+
+entities:
+  - PERSON
+
+slots:
+  PERSON:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: PERSON
+
+
+actions:
+- utter_goodbye
+- utter_greet
+- utter_user_name 
+- utter_user_query
+- utter_user_answer
+- utter_load
+- utter_iamabot
+
+
+responses:
+  utter_greet:
+  - text: "مرحبا , ما هو اسمك ؟"
+
+  utter_user_name:
+  - text: "مرحبا {PERSON},كيف يمكنني المساعدة؟"
+
+  utter_user_query:
+  - text: "لماذا؟"
+
+  utter_user_answer:
+  - text: "المتاح: 1000,2000,3000"
+
+  utter_load:
+  - text: "تمام جاري التحميل "
+
+  utter_goodbye:
+  - text: "مع السلامة"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
